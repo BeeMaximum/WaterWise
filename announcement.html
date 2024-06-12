@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="css/announcement.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>OCWD</h1>
+            <p>Management Information System</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li class="active"><a href="">Announcements</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="backup.html">Backup</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Announcements</h2>
+        </div>
+        <div class="form-container">
+            <div class="input-section">
+                <div class="dropdown-container">
+                    <label for="area">Select Area:</label>
+                    <select id="area">
+                        <option value="zone_1">Zone 1</option>
+                        <option value="zone_2">Zone 2</option>
+                        <option value="zone_3">Zone 3</option>
+                    </select>
+                </div>
+                <div class="dropdown-container">
+                    <label for="clients">Select Client:</label>
+                    <select id="clients">
+                    </select>
+                </div>
+            </div>
+            <textarea placeholder="Type your announcement here..."></textarea>
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <script src="js/announcement.js"></script>
+</body>
+</html>

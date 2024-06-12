@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCWD Management Information System</title>
+    <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>OCWD</h1>
+            <p>Management Information System</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="client.html">Clients</a></li>
+            <li><a href="announcement.html">Announcements</a></li>
+            <li class="active"><a href="">Reports</a></li>
+            <li><a href="">Backup</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Reports</h2>
+        </div>
+        <div class="reports">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile No.</th>
+                        <th>Meter No.</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Jhessa</td>
+                        <td>Upper Langcangan</td>
+                        <td>09123456789</td>
+                        <td>987456</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Mary Jane</td>
+                        <td>Upper Langcangan</td>
+                        <td>0938765412</td>
+                        <td>546789</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Risa</td>
+                        <td>Upper Langcangan</td>
+                        <td>03585423789</td>
+                        <td>2356487</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="print">Print</button>
+        </div>
+    </div>
+</body>
+</html>

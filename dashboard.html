@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>OCWD</h1>
+            <p>Management Information System</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="client.html">Clients</a></li>
+            <li><a href="announcement.html">Announcements</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="">Backup</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Overview</h2>
+            <div class="profile">
+                <p>Administrator</p>
+                <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
+        </div>
+        <div class="overview">
+            <div class="card total-clients">
+                <p>Total Clients</p>
+                <h3>100</h3>
+            </div>
+            <div class="card domestic-clients">
+                <p>Domestic Clients</p>
+                <h3>80</h3>
+            </div>
+            <div class="card commercial-clients">
+                <p>Commercial Clients</p>
+                <h3>20</h3>
+            </div>
+            <div class="calendar-container">
+                <div id='calendar'></div>
+            </div>
+
+        </div>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.10.1/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@5.10.1/main.min.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                editable: true,
+                selectable: true,
+                select: function(info) {
+                    var title = prompt('Enter Event Title:');
+                    if (title) {
+                        calendar.addEvent({
+                            title: title,
+                            start: info.startStr,
+                            end: info.endStr,
+                            allDay: info.allDay
+                        });
+                    }
+                    calendar.unselect();
+                },
+                eventClick: function(info) {
+                    var eventObj = info.event;
+                    if (confirm('Delete event "' + eventObj.title + '"?')) {
+                        eventObj.remove();
+                    }
+                }
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
