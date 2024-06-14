@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup System</title>
+    <link rel="stylesheet" href="css/backup.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>OCWD</h1>
+            <p>Management Information System</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="announcement.html">Announcements</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li class="active"><a href="#">Backup</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Backup System</h2>
+            <button id="create-backup">Create Backup</button>
+        </div>
+        <div class="backup-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date Created</th>
+                        <th>Size</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="backup-list">
+                    <!-- Backup rows will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="backup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Backup</h2>
+            <p>Are you sure you want to create a new backup?</p>
+            <button id="confirm-backup" class="confirm">Yes</button>
+            <button id="cancel-backup" class="cancel">No</button>
+        </div>
+    </div>
+    <script src="js/backup.js"></script>
+</body>
+</html>

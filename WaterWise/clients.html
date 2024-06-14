@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management</title>
+    <link rel="stylesheet" href="css/client.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>OCWD</h1>
+            <p>Management Information System</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="active"><a href="#">Clients</a></li>
+            <li><a href="announcement.html">Announcements</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="backup.html">Backup</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Clients</h2>
+            <button id="add-client">Add Client</button>
+        </div>
+        <div class="filters">
+            <select id="zone-select" class="modern-select">
+                <option value="">Select Zone</option>
+                <option value="Zone 1">Zone 1</option>
+                <option value="Zone 2">Zone 2</option>
+            </select>
+            <select id="area-select" class="modern-select" disabled>
+                <option value="">Select Area</option>
+            </select>
+        </div>
+        <div class="filters">
+            <input type="text" id="search-client" class="modern-input" placeholder="Search clients">
+        </div>
+        <div class="announ client-list-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile No.</th>
+                        <th>Meter No.</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="client-list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/clients.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="css/announcement.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>OCWD</h1>
+            <p>Management Information System</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li class="active"><a href="#">Announcements</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="backup.html">Backup</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Announcements</h2>
+            
+        </div>
+        <div class="announcement-section">
+            <div class="form-container">
+                <select id="zone-select" class="modern-select">
+                    <option value="">Select Zone</option>
+                    <option value="Zone 1">Zone 1</option>
+                    <option value="Zone 2">Zone 2</option>
+                </select>
+                <select id="area-select" class="modern-select" disabled>
+                    <option value="">Select Area</option>
+                </select>
+                <input type="text" id="client-search" class="modern-input" placeholder="Search clients...">
+                <div class="client-list-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="select-all"></th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Mobile No.</th>
+                                <th>Meter No.</th>
+                            </tr>
+                        </thead>
+                        <tbody id="client-list">
+                            <!-- Clients will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <textarea id="announcement" placeholder="Enter your announcement here..." rows="10" cols="50"></textarea>
+            <button id="send-announcement">Send</button>
+        </div>
+    </div>
+    <script src="js/announcement.js"></script>
+</body>
+</html>

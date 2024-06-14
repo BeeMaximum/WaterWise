@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1E3A8A;
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 75px;
+    height: 50px;
+}
+
+.sidebar-header h1 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.sidebar-header p {
+    font-size: 12px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-menu li.active, .sidebar-menu li:hover {
+    background-color: #2563EB;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #E5E7EB;
+    border-bottom: 1px solid #D1D5DB;
+}
+
+.header h2 {
+    font-size: 24px;
+}
+
+.announ {
+    background-color: #fff;
+    padding-block-end: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 320px;
+    overflow-y: scroll;
+}
+
+#add-client {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+    padding: 10px;
+    height: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.status.active {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button.edit, button.delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #ffc107;
+    color: white;
+}
+
+button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#zone-select, #area-select, #search-client {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    width: 200px;
+    outline: none;
+}
+
+#zone-select:focus, #area-select:focus, #search-client:focus {
+    border-color: #007bff;
+}
+
+#zone-select::-ms-expand, #area-select::-ms-expand {
+    display: none;
+}
+
+#zone-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#area-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar-menu li {
+        text-align: center;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+}
